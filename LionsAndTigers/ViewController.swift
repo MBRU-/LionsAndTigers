@@ -10,9 +10,50 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var breedLabel: UILabel!
+
+//    var allTigers = [Tiger]()
+    var allTigers:  [Tiger] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        var theTiger = Tiger()
+        
+        theTiger.name = "Tigerli"
+        theTiger.breed = "Bengalen"
+        theTiger.age = 3
+        theTiger.image = UIImage(named: "BengalTiger.jpg")
+        allTigers.append(theTiger)
+        myImageView.image = theTiger.image
+        nameLabel.text = theTiger.name
+        ageLabel.text = String(theTiger.age)
+        breedLabel.text = theTiger.breed
+        
+
+        theTiger.name = "Federico"
+        theTiger.breed = "Spanien"
+        theTiger.age = 15
+        theTiger.image = UIImage(named: "IndochineseTiger.jpg")
+        allTigers.append(theTiger)
+        
+        theTiger.name = "Susi"
+        theTiger.breed = "Florida"
+        theTiger.age = 1
+        theTiger.image = UIImage(named: "Lion.jpg")
+        allTigers.append(theTiger)
+        
+        theTiger.name = "Carlo"
+        theTiger.breed = "Italia"
+        theTiger.age = 1
+        theTiger.image = UIImage(named: "SiberianTiger.jpg")
+        allTigers.append(theTiger)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +61,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func nextBarButtonItemPressed(sender: UIBarButtonItem) {
+        let randomIndex = Int(arc4random_uniform(UInt32(allTigers.count)))
+        let tiger = allTigers[randomIndex]
+        myImageView.image = tiger.image
+        nameLabel.text = tiger.name
+        ageLabel.text = String(tiger.age)
+        breedLabel.text = tiger.breed
+    }
 
 }
 
