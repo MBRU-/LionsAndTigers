@@ -18,12 +18,14 @@ class ViewController: UIViewController {
 
 //    var allTigers = [Tiger]()
     var allTigers:  [Tiger] = []
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
         var theTiger = Tiger()
+        theTiger.chuff()
         
         theTiger.name = "Tigerli"
         theTiger.breed = "Bengalen"
@@ -62,12 +64,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextBarButtonItemPressed(sender: UIBarButtonItem) {
-        let randomIndex = Int(arc4random_uniform(UInt32(allTigers.count)))
-        let tiger = allTigers[randomIndex]
-        myImageView.image = tiger.image
-        nameLabel.text = tiger.name
-        ageLabel.text = String(tiger.age)
-        breedLabel.text = tiger.breed
+        var randomIndex:Int
+        
+        do{
+            randomIndex = Int(arc4random_uniform(UInt32(allTigers.count)))
+        } while currentIndex == randomIndex
+            currentIndex = randomIndex
+        
+        var  tiger = allTigers[randomIndex]
+        tiger.age = tiger.ageInTigerYearsFromAge(tiger.age)
+        tiger.chuffNrOfTimes(randomIndex)
+        
+//        myImageView.image = tiger.image
+//        nameLabel.text = tiger.name
+//        ageLabel.text = String(tiger.age)
+//        breedLabel.text = tiger.breed
+        
+        UIView.transitionWithView(self.view , duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+            self.myImageView.image = tiger.image
+            self.nameLabel.text = tiger.name
+            self.ageLabel.text = String(tiger.age)
+            self.breedLabel.text = tiger.breed
+            }, completion: {(finished: Bool) -> () in})
     }
 
 }

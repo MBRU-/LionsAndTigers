@@ -14,5 +14,18 @@ struct Tiger {
     var name = ""
     var breed = ""
     var image = UIImage(named:"")
+ 
+    func chuff() {
+        println("chuff - chuff")
+    }
     
+    func chuffNrOfTimes( nrOfTimes: Int) {
+        for var chuff = 0; chuff < nrOfTimes; ++chuff {
+            self.chuff()
+        }
+    }
+    
+    func ageInTigerYearsFromAge(regularAge: Int) -> Int {
+        return regularAge * 3
+    }
 }
