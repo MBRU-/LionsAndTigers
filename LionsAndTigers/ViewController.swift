@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var breedLabel: UILabel!
-    @IBOutlet weak var randomFactLabel: UILabel!
 
 //    var allTigers = [Tiger]()
     var allTigers:  [Tiger] = []
@@ -67,7 +66,7 @@ class ViewController: UIViewController {
         nameLabel.text = theTiger.name
         ageLabel.text = String(theTiger.age)
         breedLabel.text = theTiger.breed
-        self.randomFactLabel.text = theTiger.randomFact()
+        
 
         theTiger.name = "Federico"
         theTiger.breed = "Spanien"
@@ -115,7 +114,6 @@ class ViewController: UIViewController {
     func updateView() {
     
         UIView.transitionWithView(self.view , duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
-
             if self.currentAnimal.species == "Tiger" {
                 let tiger = self.allTigers[self.currentAnimal.index]
                 self.myImageView.image = tiger.image
@@ -132,7 +130,7 @@ class ViewController: UIViewController {
                 self.nameLabel.text = lion.name
             }
             
-
+            
             }, completion: {(finished: Bool) -> () in})
     }
     
