@@ -16,10 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lioness.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="lVY-pp-asc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BengalTiger.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lVY-pp-asc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="515"/>
+>>>>>>> FETCH_HEAD
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-av-FvU">
@@ -28,7 +35,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="35" y="433" width="213" height="21"/>
+                                    <rect key="frame" x="23" y="286" width="213" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0C-Oe-haE">
@@ -37,7 +44,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="35" y="450" width="213" height="21"/>
+                                    <rect key="frame" x="23" y="303" width="213" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfo-QU-HYI">
@@ -46,7 +53,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="35" y="468" width="213" height="21"/>
+                                    <rect key="frame" x="23" y="321" width="213" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaD-uk-kNE">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="23" y="350" width="277" height="84"/>
                                 </variation>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heU-9d-FMj">
@@ -71,7 +87,11 @@
                                 <exclude reference="Jnh-av-FvU"/>
                                 <exclude reference="a0C-Oe-haE"/>
                                 <exclude reference="pfo-QU-HYI"/>
+<<<<<<< HEAD
                                 <exclude reference="heU-9d-FMj"/>
+=======
+                                <exclude reference="UaD-uk-kNE"/>
+>>>>>>> FETCH_HEAD
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -80,7 +100,11 @@
                                 <include reference="Jnh-av-FvU"/>
                                 <include reference="a0C-Oe-haE"/>
                                 <include reference="pfo-QU-HYI"/>
+<<<<<<< HEAD
                                 <include reference="heU-9d-FMj"/>
+=======
+                                <include reference="UaD-uk-kNE"/>
+>>>>>>> FETCH_HEAD
                             </mask>
                         </variation>
                     </view>
@@ -89,6 +113,7 @@
                         <outlet property="breedLabel" destination="pfo-QU-HYI" id="JyF-DN-zyO"/>
                         <outlet property="myImageView" destination="lVY-pp-asc" id="epQ-W2-TlL"/>
                         <outlet property="nameLabel" destination="Jnh-av-FvU" id="0Rs-vc-u8h"/>
+                        <outlet property="randomFactLabel" destination="UaD-uk-kNE" id="Hci-Kt-s9m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -96,6 +121,10 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
         <image name="Lioness.jpeg" width="275" height="183"/>
+=======
+        <image name="BengalTiger.jpg" width="1295" height="870"/>
+>>>>>>> FETCH_HEAD
     </resources>
 </document>
