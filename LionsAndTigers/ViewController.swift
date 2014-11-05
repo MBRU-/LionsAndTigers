@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
 //    var allTigers = [Tiger]()
     var allTigers:  [Tiger] = []
-    var lions: [Lion] = []
+    var lions: [LionCub] = []
     var currentIndex = 0
     var currentAnimal = (species: "Tiger", index: 0)
     
@@ -26,14 +26,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        var lion = Lion()
+    //    var lion = Lion()
+        var lion = LionCub()
         lion.age = 4
         lion.isAlphaMale = false
         lion.image = UIImage(named: "lion.jpg")
         lion.name = "Mustaffa"
         lion.subspecies = "Niederländer Löwe"
         
-        var lioness = Lion()
+        var lioness = LionCub()
         lioness.age = 3
         lioness.isAlphaMale = false
         lioness.image = UIImage(named: "Lioness.jpeg")
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
         lionCub.image = UIImage(named: "Lioncub1.jpg")
         lionCub.subspecies = "Masai"
         lionCub.roar()
+        lionCub.rubLionsCubsBelly()
         
         var theTiger = Tiger()
         theTiger.chuff()
@@ -128,6 +130,7 @@ class ViewController: UIViewController {
                 self.breedLabel.text = lion.subspecies
                 self.ageLabel.text = "\(lion.age)"
                 self.nameLabel.text = lion.name
+                lion.rubLionsCubsBelly()
             }
             
             

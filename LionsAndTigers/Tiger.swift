@@ -16,7 +16,7 @@ struct Tiger {
     var image = UIImage(named:"")
  
     func chuff() {
-        println("chuff - chuff")
+        println("Tiger: chuff - chuff")
     }
     
     func chuffNrOfTimes( nrOfTimes: Int) {
